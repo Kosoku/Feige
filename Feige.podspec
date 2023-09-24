@@ -21,5 +21,7 @@ Feige is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` frame
 
   s.source_files = 'Feige/**/*.{h,m,swift}'
 
+  s.swift_versions = ['5']
+
   s.frameworks = 'Foundation'
 end

@@ -140,7 +140,7 @@ public extension ScopeFunctions where Self: Any {
         // configure $0
      }
      
-     // do something with the configured retval which is of type MyStruct
+     // do something with the configured retval which is a MyStruct
      ```
      
      - Parameter block: The block to invoke
@@ -199,6 +199,8 @@ extension Int: ScopeFunctions {}
 extension Float: ScopeFunctions {}
 
 extension Double: ScopeFunctions {}
+
+extension Date: ScopeFunctions {}
 
 extension String: ScopeFunctions {}
 

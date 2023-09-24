@@ -1,14 +1,15 @@
 name: 'Unit Tests'
 on:
   push:
-    - '**'
-  paths:
-    - '**.h'
-    - '**.m'
-    - '**.mm'
-    - '**.swift'
-  tags-ignore:
-    - '**'
+    branches:
+      - '**'
+    paths:
+      - '**.h'
+      - '**.m'
+      - '**.mm'
+      - '**.swift'
+    tags-ignore:
+      - '**'
 jobs:
   unit_tests:
     name: 'Unit tests'

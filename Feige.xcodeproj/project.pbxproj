@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7928AA282ABF9F7800F94EDF /* Feige.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA272ABF9F7800F94EDF /* Feige.docc */; };
 		7928AA2E2ABF9F7800F94EDF /* Feige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7928AA232ABF9F7800F94EDF /* Feige.framework */; };
 		7928AA332ABF9F7800F94EDF /* FeigeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA322ABF9F7800F94EDF /* FeigeTests.swift */; };
 		7928AA342ABF9F7800F94EDF /* Feige.h in Headers */ = {isa = PBXBuildFile; fileRef = 7928AA262ABF9F7800F94EDF /* Feige.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7928AA3E2ABFA0D500F94EDF /* ScopeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */; };
+		7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		7928AA232ABF9F7800F94EDF /* Feige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928AA262ABF9F7800F94EDF /* Feige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feige.h; sourceTree = "<group>"; };
-		7928AA272ABF9F7800F94EDF /* Feige.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Feige.docc; sourceTree = "<group>"; };
 		7928AA2D2ABF9F7800F94EDF /* FeigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928AA322ABF9F7800F94EDF /* FeigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeigeTests.swift; sourceTree = "<group>"; };
 		7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 			children = (
 				7928AA262ABF9F7800F94EDF /* Feige.h */,
 				7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */,
-				7928AA272ABF9F7800F94EDF /* Feige.docc */,
 			);
 			path = Feige;
 			sourceTree = "<group>";
@@ -199,8 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7928AA3E2ABFA0D500F94EDF /* ScopeFunctions.swift in Sources */,
-				7928AA282ABF9F7800F94EDF /* Feige.docc in Sources */,
+				7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

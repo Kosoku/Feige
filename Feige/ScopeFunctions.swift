@@ -181,6 +181,7 @@ public extension ScopeFunctions where Self: AnyObject {
      - Returns: The receiver
      - SeeAlso: https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/also.html
      */
+    @discardableResult
     @inlinable
     @inline(__always)
     func also(_ block: (Self) -> Void) -> Self {

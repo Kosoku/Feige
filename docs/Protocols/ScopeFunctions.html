@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ScopeFunctions Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/ScopeFunctions" class="dashAnchor"></a>
+    <a title="ScopeFunctions Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Feige 1.0.1 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/Kosoku/Feige"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fkosoku.github.io%2FFeige%2Fdocsets%2FFeige.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Feige Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        ScopeFunctions Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Sa">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Sb">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:@S@CGAffineTransform">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:14CoreFoundation7CGFloatV">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:@S@CGPoint">CGPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:@S@CGRect">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:@S@CGSize">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:@S@CGVector">CGVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:SD">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Sd">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Sf">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Si">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)NSObject">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:Sh">Set</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/s:SS">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:5Feige3runyxxyXElF">run(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ScopeFunctions</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ScopeFunctions</span></code></pre>
+
+                </div>
+              </div>
+            <p>Conformance to this protocol provides implementation of <strong>some</strong> of the <em>Kotlin Scope Functions</em>. To add conformance to your own types, see examples below.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="kd">struct</span> <span class="kt">MyStruct</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/docs/scope-functions.html">https://kotlinlang.org/docs/scope-functions.html</a>
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Functions"></a>
+                  <h3 class="section-name"><span>Public Functions</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige14ScopeFunctionsPAAE3letyqd__qd__xXElF"></a>
+                    <a name="//apple_ref/swift/Method/let(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige14ScopeFunctionsPAAE3letyqd__qd__xXElF">let(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invokes the provided <code>block</code> and returns, providing the receiver as the only argument.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyStruct</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">MyStruct</span><span class="p">()</span><span class="o">.</span><span class="kd">let</span> <span class="p">{</span>
+   <span class="c1">// do stuff with $0 and return a different value</span>
+   <span class="s">"my string value"</span>
+<span class="p">}</span>
+
+<span class="c1">// do something with retval which is a String</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="p">`</span><span class="nv">let</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to invoke</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of invoking <code>block</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige14ScopeFunctionsPAAE6takeIfyxSgSbxXEF"></a>
+                    <a name="//apple_ref/swift/Method/takeIf(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige14ScopeFunctionsPAAE6takeIfyxSgSbxXEF">takeIf(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invokes the provided <code>predicate</code>, if it returns <code>true</code>, returns the receiver, otherwise returns nil.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyStruct</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">MyStruct</span><span class="p">()</span><span class="o">.</span><span class="n">takeIf</span> <span class="p">{</span>
+   <span class="c1">// test $0 to determine return value</span>
+<span class="p">}</span>
+
+<span class="c1">// do something with retval which is an optional MyStruct</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/take-if.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/take-if.html</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">takeIf</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The predicate to invoke</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The receiver or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige14ScopeFunctionsPAAE10takeUnlessyxSgSbxXEF"></a>
+                    <a name="//apple_ref/swift/Method/takeUnless(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige14ScopeFunctionsPAAE10takeUnlessyxSgSbxXEF">takeUnless(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invokes the provided <code>predicate</code>, if it returns <code>true</code>, returns nil, otherwise returns the receiver.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyStruct</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">MyStruct</span><span class="p">()</span><span class="o">.</span><span class="n">takeUnless</span> <span class="p">{</span>
+   <span class="c1">// test $0 to determine return value</span>
+<span class="p">}</span>
+
+<span class="c1">// do something with retval which is an optional MyStruct</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/take-unless.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/take-unless.html</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">takeUnless</span><span class="p">(</span><span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The predicate to invoke</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The receiver or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige14ScopeFunctionsPAAE4alsoyxyxzXEF"></a>
+                    <a name="//apple_ref/swift/Method/also(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige14ScopeFunctionsPAAE4alsoyxyxzXEF">also(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invokes the provided <code>block</code>, providing the receiver as the only argument and returns the receiver.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyStruct</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">MyStruct</span><span class="p">()</span><span class="o">.</span><span class="n">also</span> <span class="p">{</span>
+   <span class="c1">// configure $0</span>
+<span class="p">}</span>
+
+<span class="c1">// do something with the configured retval which is a MyStruct</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/also.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/also.html</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">also</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="k">inout</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to invoke</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The receiver</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige14ScopeFunctionsPAARlzCrlE4alsoyxyxXEF"></a>
+                    <a name="//apple_ref/swift/Method/also(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige14ScopeFunctionsPAARlzCrlE4alsoyxyxXEF">also(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invokes the provided <code>block</code>, providing the receiver as the only argument and returns the receiver.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">ScopeFunctions</span> <span class="p">{}</span>
+
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">MyClass</span><span class="p">()</span><span class="o">.</span><span class="n">also</span> <span class="p">{</span>
+   <span class="c1">// configure $0</span>
+<span class="p">}</span>
+
+<span class="c1">// do something with the configured retval which is a MyClass</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/also.html">https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/also.html</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
+<span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">also</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to invoke</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The receiver</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="http://kosoku.com/" target="_blank" rel="external noopener">Kosoku</a>. All rights reserved. (Last updated: 2023-09-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

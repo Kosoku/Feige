@@ -1,0 +1,37 @@
+name: 'Unit Tests'
+on:
+  push:
+    - '**'
+  paths:
+    - '**.h'
+    - '**.m'
+    - '**.mm'
+    - '**.swift'
+  tags-ignore:
+    - '**'
+jobs:
+  unit_tests:
+    name: 'Unit tests'
+    runs-on: 'macos-13'
+    timeout-minutes: 45
+    env:
+      # for shell scripts
+      TERM: xterm
+      LC_ALL: 'en_US.UTF-8'
+      LANG: 'en_US.UTF-8'
+      # for bundler
+      BUNDLE_SET: 'path .gems/bundle'
+      BUNDLE_PATH: '.gems/bundle'
+      # for fastlane
+      FASTLANE_SKIP_UPDATE_CHECKL: 'true'
+      # for Xcode
+      DEVELOPER_DIR: '/Applications/Xcode_15.0.app/Contents/Developer'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cache bundle install
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Unit tests
+        run: bundle exec fastlane unit_tests

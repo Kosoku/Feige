@@ -191,8 +191,7 @@ public extension ScopeFunctions where Self: AnyObject {
     }
 }
 
-extension NSObject: ScopeFunctions {}
-
+// Swift types
 extension Bool: ScopeFunctions {}
 
 extension Int: ScopeFunctions {}
@@ -208,3 +207,18 @@ extension Array: ScopeFunctions {}
 extension Set: ScopeFunctions {}
 
 extension Dictionary: ScopeFunctions {}
+
+// Foundation types
+extension NSObject: ScopeFunctions {}
+
+extension CGAffineTransform: ScopeFunctions {}
+
+extension CGFloat: ScopeFunctions {}
+
+extension CGPoint: ScopeFunctions {}
+
+extension CGRect: ScopeFunctions {}
+
+extension CGSize: ScopeFunctions {}
+
+extension CGVector: ScopeFunctions {}

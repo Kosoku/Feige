@@ -29,6 +29,7 @@
 		7928AA2D2ABF9F7800F94EDF /* FeigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928AA322ABF9F7800F94EDF /* FeigeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeigeTests.swift; sourceTree = "<group>"; };
 		7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
+		7928AA412ABFDA7A00F94EDF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		7928AA192ABF9F7800F94EDF = {
 			isa = PBXGroup;
 			children = (
+				7928AA412ABFDA7A00F94EDF /* Package.swift */,
 				7928AA252ABF9F7800F94EDF /* Feige */,
 				7928AA312ABF9F7800F94EDF /* FeigeTests */,
 				7928AA242ABF9F7800F94EDF /* Products */,

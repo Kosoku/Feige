@@ -140,7 +140,7 @@ public extension ScopeFunctions where Self: Any {
         // configure $0
      }
      
-     // do something with the configured retval which is a MyStruct
+     // do something with the configured retval which is of type MyStruct
      ```
      
      - Parameter block: The block to invoke

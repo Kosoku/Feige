@@ -55,7 +55,7 @@ public protocol ScopeFunctions {}
 public extension ScopeFunctions {
     // MARK: - Public Functions
     /**
-     Invokes the provided `block` and returns, providing the receiver as the only argument.
+     Invokes the provided `block` and returns the result, providing the receiver as the only argument.
      
      ```
      struct MyStruct: ScopeFunctions {}

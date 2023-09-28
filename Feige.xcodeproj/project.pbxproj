@@ -11,6 +11,8 @@
 		7928AA332ABF9F7800F94EDF /* ScopeFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA322ABF9F7800F94EDF /* ScopeFunctionsTests.swift */; };
 		7928AA342ABF9F7800F94EDF /* Feige.h in Headers */ = {isa = PBXBuildFile; fileRef = 7928AA262ABF9F7800F94EDF /* Feige.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */; };
+		799322D92AC5294C00AAD49C /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799322D82AC5294C00AAD49C /* Bool+Extensions.swift */; };
+		799322DB2AC52A3500AAD49C /* BoolExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799322DA2AC52A3500AAD49C /* BoolExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		7928AA322ABF9F7800F94EDF /* ScopeFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctionsTests.swift; sourceTree = "<group>"; };
 		7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
 		7928AA412ABFDA7A00F94EDF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		799322D82AC5294C00AAD49C /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
+		799322DA2AC52A3500AAD49C /* BoolExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			children = (
 				7928AA262ABF9F7800F94EDF /* Feige.h */,
 				7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */,
+				799322D82AC5294C00AAD49C /* Bool+Extensions.swift */,
 			);
 			path = Feige;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7928AA322ABF9F7800F94EDF /* ScopeFunctionsTests.swift */,
+				799322DA2AC52A3500AAD49C /* BoolExtensionsTests.swift */,
 			);
 			path = FeigeTests;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */,
+				799322D92AC5294C00AAD49C /* Bool+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7928AA332ABF9F7800F94EDF /* ScopeFunctionsTests.swift in Sources */,
+				799322DB2AC52A3500AAD49C /* BoolExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

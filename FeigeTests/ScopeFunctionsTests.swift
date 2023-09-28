@@ -35,25 +35,25 @@ class ScopeFunctionsTests: XCTestCase {
         let retval = "".takeIf {
             $0.isEmpty
         }
-        XCTAssert(retval != nil)
+        XCTAssertNotNil(retval)
         
         let optionalRetval = "".takeIf {
             !$0.isEmpty
         }
         
-        XCTAssert(optionalRetval == nil)
+        XCTAssertNil(optionalRetval)
     }
     
     func testTakeUnless() throws {
         let optionalRetval = "".takeUnless {
             $0.isEmpty
         }
-        XCTAssert(optionalRetval == nil)
+        XCTAssertNil(optionalRetval)
         
         let retval = "".takeUnless {
             !$0.isEmpty
         }
-        XCTAssert(retval != nil)
+        XCTAssertNotNil(retval)
     }
     
     func testAlsoStruct() throws {
@@ -68,6 +68,6 @@ class ScopeFunctionsTests: XCTestCase {
         let retval = AlsoClass().also {
             $0.flag = true
         }
-        XCTAssert(retval.flag)
+        XCTAssertTrue(retval.flag)
     }
 }

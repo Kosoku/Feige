@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bool Extension Reference</title>
+    <title>Emptyable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Bool" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/Emptyable" class="dashAnchor"></a>
 
-    <a title="Bool Extension Reference"></a>
+    <a title="Emptyable Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Bool Extension Reference
+      Emptyable Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -213,16 +213,21 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Bool</h1>
+            <h1>Emptyable</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Bool</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Emptyable</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Describes an object that be empty.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">str</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="n">isEmpty</span>
+
+<span class="c1">// so something with str which is true</span>
+</code></pre>
+
           </div>
         </section>
 
@@ -230,11 +235,11 @@
           <div class="section-content">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Public%20Functions"></a>
-                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Public%20Functions"></a>
-                  <h3 class="section-name"><span>Public Functions</span>
+                  <a class="section-name-link" href="#/Public%20Properties"></a>
+                  <h3 class="section-name"><span>Public Properties</span>
 </h3>
                 </div>
               </div>
@@ -242,9 +247,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sb5FeigeE3notSbyF"></a>
-                    <a name="//apple_ref/swift/Method/not()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sb5FeigeE3notSbyF">not()</a>
+                    <a name="/s:5Feige9EmptyableP7isEmptySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige9EmptyableP7isEmptySbvp">isEmpty</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,24 +257,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the inverse of the receiver.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kc">true</span><span class="o">.</span><span class="nf">not</span><span class="p">()</span>
-
-<span class="c1">// do something with retval which is false</span>
-</code></pre>
+                        <p>Returns whether the receiver is empty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">not</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The inverse value</p>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige9EmptyablePAAE10isNotEmptySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNotEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige9EmptyablePAAE10isNotEmptySbvp">isNotEmpty</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether the receiver is <strong>NOT</strong> empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isNotEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige9EmptyablePAAE10nilIfEmptyxSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nilIfEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige9EmptyablePAAE10nilIfEmptyxSgvp">nilIfEmpty</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>nil</code> if the receiver is empty, otherwise returns the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nilIfEmpty</span><span class="p">:</span> <span class="k">Self</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

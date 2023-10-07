@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bool Extension Reference</title>
+    <title>KeyPath Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Bool" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/KeyPath" class="dashAnchor"></a>
 
-    <a title="Bool Extension Reference"></a>
+    <a title="KeyPath Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Bool Extension Reference
+      KeyPath Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -213,12 +213,11 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Bool</h1>
+            <h1>KeyPath</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Bool</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">KeyPath</span> <span class="k">where</span> <span class="kt">Root</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -230,11 +229,11 @@
           <div class="section-content">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Public%20Functions"></a>
-                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Public%20Functions"></a>
-                  <h3 class="section-name"><span>Public Functions</span>
+                  <a class="section-name-link" href="#/Public%20Properties"></a>
+                  <h3 class="section-name"><span>Public Properties</span>
 </h3>
                 </div>
               </div>
@@ -242,9 +241,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sb5FeigeE3notSbyF"></a>
-                    <a name="//apple_ref/swift/Method/not()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sb5FeigeE3notSbyF">not()</a>
+                    <a name="/s:s7KeyPathC5FeigeSo8NSObjectCRbzrlE8toStringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/toString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s7KeyPathC5FeigeSo8NSObjectCRbzrlE8toStringSSvp">toString</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,10 +251,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the inverse of the receiver.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kc">true</span><span class="o">.</span><span class="nf">not</span><span class="p">()</span>
+                        <p>Returns the <code>String</code> equivalent of the receiver.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">keyPath</span> <span class="o">=</span> <span class="err">\</span><span class="kt">Entity</span><span class="o">.</span><span class="n">relationship</span><span class="o">.</span><span class="n">property</span>
+<span class="k">let</span> <span class="nv">str</span> <span class="o">=</span> <span class="n">keyPath</span><span class="o">.</span><span class="n">toString</span>
 
-<span class="c1">// do something with retval which is false</span>
+<span class="c1">// do something with str which is "relationship.property"</span>
 </code></pre>
 
                       </div>
@@ -263,13 +263,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">not</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">toString</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The inverse value</p>
                       </div>
                     </section>
                   </div>

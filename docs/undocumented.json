@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/williamtowe/Projects/Feige/Feige/WeakReference.swift",
+      "line": 55,
+      "symbol": "WeakReference.hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Feige/Feige/WeakReference.swift",
+      "line": 64,
+      "symbol": "WeakReference.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/williamtowe/Projects/Feige"
 }

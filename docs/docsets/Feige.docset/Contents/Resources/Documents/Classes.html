@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feige  Reference</title>
+    <title>Classes  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,8 +14,9 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
 
-    <a title="Feige  Reference"></a>
+    <a title="Classes  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -49,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">Feige Reference</a>
       <img class="carat" src="img/carat.png" alt=""/>
-      Feige  Reference
+      Classes  Reference
     </p>
 
     <div class="content-wrapper">
@@ -212,21 +213,101 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            
-            <h2 id='feige' class='heading'>Feige</h2>
-
-<p><a href="https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml"><img src="https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml/badge.svg" alt="Unit Tests"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="http://cocoapods.org/?q=Feige"><img src="http://img.shields.io/cocoapods/v/Feige.svg" alt="Version"></a>
-<a href=""><img src="http://img.shields.io/cocoapods/p/Feige.svg" alt="Platform"></a>
-<a href="https://github.com/Kosoku/Feige/blob/main/LICENSE.txt"><img src="http://img.shields.io/cocoapods/l/Feige.svg" alt="License"></a>
-<a href="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square"><img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square" alt="Swift Package Manager"></a></p>
-
-<p><em>Feige</em> is a Swift iOS/macOS/tvOS/watchOS framework that extends the <code>Foundation</code> framework.</p>
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
 
           </div>
         </section>
 
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige13ReadWriteLockC"></a>
+                    <a name="//apple_ref/swift/Class/ReadWriteLock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige13ReadWriteLockC">ReadWriteLock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Many readers, single writer generic lock.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myClass</span> <span class="o">=</span> <span class="o">...</span>
+<span class="k">let</span> <span class="nv">lock</span> <span class="o">=</span> <span class="kt">ReadWriteLock</span><span class="p">(</span><span class="n">myClass</span><span class="p">)</span>
+
+<span class="n">lock</span><span class="o">.</span><span class="n">mutate</span> <span class="p">{</span>
+   <span class="c1">// do stuff with $0 to update myClass</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Classes/ReadWriteLock.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ReadWriteLock</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige13WeakReferenceC"></a>
+                    <a name="//apple_ref/swift/Class/WeakReference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige13WeakReferenceC">WeakReference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows weakly reference another object.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">MyClass</span> <span class="p">{</span>
+   <span class="c1">// MARK: - Private Properties</span>
+   <span class="kd">private</span> <span class="k">let</span> <span class="nv">weakReference</span><span class="p">:</span> <span class="kt">WeakReference</span><span class="o">&lt;</span><span class="kt">MyOtherClass</span><span class="o">&gt;</span>
+
+   <span class="c1">// MARK: Public Functions</span>
+   <span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+       <span class="k">guard</span> <span class="k">let</span> <span class="nv">reference</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">weakReference</span><span class="o">.</span><span class="n">value</span> <span class="k">else</span> <span class="p">{</span>
+           <span class="k">return</span>
+       <span class="p">}</span>
+       <span class="c1">// do something with reference which is non-nil</span>
+   <span class="p">}</span>
+
+   <span class="c1">// MARK: Initializers</span>
+   <span class="nf">init</span><span class="p">(</span><span class="nv">myOtherClass</span><span class="p">:</span> <span class="kt">MyOtherClass</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">self</span><span class="o">.</span><span class="n">weakReference</span> <span class="o">=</span> <span class="kt">WeakReference</span><span class="p">(</span><span class="n">myOtherClass</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Classes/WeakReference.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">WeakReference</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
       </article>
     </div>

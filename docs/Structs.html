@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feige  Reference</title>
+    <title>Structures  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,8 +14,9 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
 
-    <a title="Feige  Reference"></a>
+    <a title="Structures  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -49,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">Feige Reference</a>
       <img class="carat" src="img/carat.png" alt=""/>
-      Feige  Reference
+      Structures  Reference
     </p>
 
     <div class="content-wrapper">
@@ -212,21 +213,64 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            
-            <h2 id='feige' class='heading'>Feige</h2>
-
-<p><a href="https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml"><img src="https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml/badge.svg" alt="Unit Tests"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="http://cocoapods.org/?q=Feige"><img src="http://img.shields.io/cocoapods/v/Feige.svg" alt="Version"></a>
-<a href=""><img src="http://img.shields.io/cocoapods/p/Feige.svg" alt="Platform"></a>
-<a href="https://github.com/Kosoku/Feige/blob/main/LICENSE.txt"><img src="http://img.shields.io/cocoapods/l/Feige.svg" alt="License"></a>
-<a href="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square"><img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square" alt="Swift Package Manager"></a></p>
-
-<p><em>Feige</em> is a Swift iOS/macOS/tvOS/watchOS framework that extends the <code>Foundation</code> framework.</p>
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
 
           </div>
         </section>
 
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige17IndirectReferenceV"></a>
+                    <a name="//apple_ref/swift/Struct/IndirectReference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige17IndirectReferenceV">IndirectReference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows recursively referencing a struct within itself.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Node</span> <span class="p">{</span>
+   <span class="c1">// MARK: - Public Properties</span>
+   <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span>
+
+   <span class="k">var</span> <span class="nv">left</span><span class="p">:</span> <span class="kt">Node</span> <span class="p">{</span>
+       <span class="k">self</span><span class="o">.</span><span class="n">_left</span><span class="o">.</span><span class="n">value</span>
+   <span class="p">}</span>
+   <span class="k">var</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">Node</span> <span class="p">{</span>
+       <span class="k">self</span><span class="o">.</span><span class="n">_right</span><span class="o">.</span><span class="n">value</span>
+   <span class="p">}</span>
+
+   <span class="c1">// MARK: - Private Properties</span>
+   <span class="kd">private</span> <span class="k">let</span> <span class="nv">_left</span><span class="p">:</span> <span class="kt">IndirectReference</span><span class="o">&lt;</span><span class="kt">Node</span><span class="o">&gt;</span>
+   <span class="kd">private</span> <span class="k">let</span> <span class="nv">_right</span><span class="p">:</span> <span class="kt">IndirectReference</span><span class="o">&lt;</span><span class="kt">Node</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Structs/IndirectReference.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IndirectReference</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Hashable</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
       </article>
     </div>

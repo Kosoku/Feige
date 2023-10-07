@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bool Extension Reference</title>
+    <title>NSDecimalNumber Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Bool" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/NSDecimalNumber" class="dashAnchor"></a>
 
-    <a title="Bool Extension Reference"></a>
+    <a title="NSDecimalNumber Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Bool Extension Reference
+      NSDecimalNumber Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -213,12 +213,11 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Bool</h1>
+            <h1>NSDecimalNumber</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Bool</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Bool</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">NSDecimalNumber</span></code></pre>
 
                 </div>
               </div>
@@ -228,6 +227,46 @@
 
         <section class="section">
           <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Properties"></a>
+                  <h3 class="section-name"><span>Public Properties</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15NSDecimalNumberC5FeigeE11negativeOneABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/negativeOne" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15NSDecimalNumberC5FeigeE11negativeOneABvpZ">negativeOne</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constant for <code>-1</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">negativeOne</span><span class="p">:</span> <span class="kt">NSDecimalNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Public%20Functions"></a>
@@ -242,9 +281,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sb5FeigeE3notSbyF"></a>
-                    <a name="//apple_ref/swift/Method/not()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sb5FeigeE3notSbyF">not()</a>
+                    <a name="/s:So15NSDecimalNumberC5FeigeE3absAByF"></a>
+                    <a name="//apple_ref/swift/Method/abs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15NSDecimalNumberC5FeigeE3absAByF">abs()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -252,10 +291,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the inverse of the receiver.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kc">true</span><span class="o">.</span><span class="nf">not</span><span class="p">()</span>
+                        <p>Returns the absolute value of  the receiver.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">NSDecimalNumber</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="nf">abs</span><span class="p">()</span>
 
-<span class="c1">// do something with retval which is false</span>
+<span class="c1">// do something with retval which is 5</span>
 </code></pre>
 
                       </div>
@@ -263,13 +302,71 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">not</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">abs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSDecimalNumber</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The inverse value</p>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15NSDecimalNumberC5FeigeE8negativeAByF"></a>
+                    <a name="//apple_ref/swift/Method/negative()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15NSDecimalNumberC5FeigeE8negativeAByF">negative()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the result of multiplying the absolute value of the receiver by <code>-1</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">NSDecimalNumber</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="nf">negative</span><span class="p">()</span>
+
+<span class="c1">// do something with retval which is -5</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">negative</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSDecimalNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15NSDecimalNumberC5FeigeE8invertedAByF"></a>
+                    <a name="//apple_ref/swift/Method/inverted()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15NSDecimalNumberC5FeigeE8invertedAByF">inverted()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the result of multiplying the receiver by <code>-1</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retval</span> <span class="o">=</span> <span class="kt">NSDecimalNumber</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="nf">inverted</span><span class="p">()</span>
+
+<span class="c1">// do something with retval which is -5</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">inverted</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSDecimalNumber</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

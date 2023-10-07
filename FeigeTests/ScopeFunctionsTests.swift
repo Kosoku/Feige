@@ -19,7 +19,7 @@
 import XCTest
 @testable import Feige
 
-class AlsoClass: ScopeFunctions {
+final class AlsoClass: ScopeFunctions {
     var flag = false
 }
 

@@ -204,6 +204,8 @@ extension Date: ScopeFunctions {}
 
 extension String: ScopeFunctions {}
 
+extension URL: ScopeFunctions {}
+
 extension Array: ScopeFunctions {}
 
 extension Set: ScopeFunctions {}

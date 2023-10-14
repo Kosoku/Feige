@@ -10,6 +10,9 @@ on:
       - '**.swift'
     tags-ignore:
       - '**'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   unit_tests:
     name: 'Unit tests'

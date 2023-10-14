@@ -20,18 +20,39 @@
 import os.log
 
 /**
- A set of commonly used OSLog instances for use with `os_log` functions
+ Commonly used OSLog instances for use with `os_log` functions
  
  ```
  os_log(.debug, log: .analytics, "%@ %@", #function, String(describing: self))
  ```
  */
 public extension OSLog {
+    /**
+     Use to log analytics related info.
+     */
     static let analytics = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "analytics")
+    /**
+     Use to log within `extension` statements.
+     */
     static let `extension` = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "extension")
+    /**
+     Use to log network request/response related info.
+     */
     static let network = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "network")
+    /**
+     Use to log model related info (e.g. `CoreData`).
+     */
     static let model = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "model")
+    /**
+     Use to log within view classes (e.g. `NSView`, `UIView`).
+     */
     static let view = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "view")
+    /**
+     Use to log within view model classes.
+     */
     static let viewModel = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "viewModel")
+    /**
+     Use to log within view controller classes (e.g. `NSViewController`, `UIViewController`).
+     */
     static let viewController = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "unidentified bundle", category: "viewController")
 }

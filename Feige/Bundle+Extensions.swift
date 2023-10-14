@@ -19,21 +19,43 @@
 
 import Foundation
 
+internal extension Bundle {
+    // MARK: - Internal Functions
+    var frameworkBundle: Bundle? {
+        .init(identifier: "com.kosoku.Feige") ?? Bundle.main.privateFrameworksURL?.appendingPathComponent("Feige.framework", isDirectory: true).appendingPathComponent("Feige.bundle", isDirectory: true).let({
+            Bundle.init(url: $0)
+        }) ?? Bundle.main.url(forResource: "Feige", withExtension: "bundle")?.let({
+            Bundle.init(url: $0)
+        })
+    }
+}
+
 public extension Bundle {
-    // MARK: - Constants
-    static let kBundleIdentifierKey = "CFBundleIdentifier"
-    static let kBundleDisplayNameKey = "CFBundleDisplayName"
-    static let kBundleExecutableKey = "CFBundleExecutable"
-    static let kBundleShortVersionStringKey = "CFBundleShortVersionString"
-    static let kBundleVersionKey = "CFBundleVersion"
-    
-    private static let _cache = NSCache<NSNumber, Bundle>()
+    // MARK: - Public Types
+    struct Key: RawRepresentable {
+        // MARK: - Public Properties
+        static let identifier = Key("CFBundleIdentifier")
+        static let displayName = Key("CFBundleDisplayName")
+        static let executable = Key("CFBundleExecutable")
+        static let shortVersionString = Key("CFBundleShortVersionString")
+        static let version = Key("CFBundleVersion")
+        
+        public let rawValue: String
+        
+        // MARK: - Initializers
+        public init(_ rawValue: String) {
+            self.rawValue = rawValue
+        }
+        public init(rawValue: String) {
+            self.rawValue = rawValue
+        }
+    }
     
     // MARK: - Public Properties
     /**
      Returns the current bundle based on the calling context. For example, if you call this property within a framework, it will return the framework bundle. If you call this property in the main app, it will return the main bundle.
      */
-    class var currentBundle: Bundle? {
+    static var current: Bundle? {
         let caller = Thread.callStackReturnAddresses[1]
         
         if let bundle = _cache.object(forKey: caller) {
@@ -58,60 +80,47 @@ public extension Bundle {
     }
     
     /**
-     Returns the bundle identifier. For example, "com.mycompany.app".
-     
-     @return The bundle identifier
+     Returns the bundle identifier. For example, *com.mycompany.app*.
      */
-    var bundleIdentifier: String? {
-        return self.bundleValueForKey(Bundle.kBundleIdentifierKey)
+    var identifier: String? {
+        self.valueForInfoDictionaryKey(.identifier) as? String
     }
     /**
-     Returns the bundle display name. For example, "App". This value is localized.
-     
-     @return The bundle display name
+     Returns the bundle display name. For example, *App*. This value is localized.
      */
-    var bundleDisplayName: String? {
-        return self.bundleValueForKey(Bundle.kBundleDisplayNameKey)
+    var displayName: String? {
+        self.valueForInfoDictionaryKey(.displayName) as? String
     }
     /**
-     Returns the bundle executable. For example, "App". This value is not localized.
-     
-     @return The bundle executable
+     Returns the bundle executable. For example, *App*. This value is not localized.
      */
-    var bundleExecutable: String? {
-        return self.bundleValueForKey(Bundle.kBundleExecutableKey)
+    var executable: String? {
+        self.valueForInfoDictionaryKey(.executable) as? String
     }
     /**
-     Returns the bundle short version string. For example, "1.0.0".
-     
-     @return The bundle short version string
+     Returns the bundle short version string. For example, *1.0.0*.
      */
-    var bundleShortVersion: String? {
-        return self.bundleValueForKey(Bundle.kBundleShortVersionStringKey)
+    var shortVersionString: String? {
+        self.valueForInfoDictionaryKey(.shortVersionString) as? String
     }
     /**
-     Returns the bundle version. For example, "1".
-     
-     @return The bundle version
+     Returns the bundle version. For example, *1*.
      */
-    var bundleVersion: String? {
-        return self.bundleValueForKey(Bundle.kBundleVersionKey)
+    var version: String? {
+        self.valueForInfoDictionaryKey(.version) as? String
     }
-    // MARK: - Private Functions
-    private func bundleValueForKey(_ key: String) -> String? {
-        return self.infoDictionary?.let({
-            $0[key] as? String
-        })
-    }
-}
-
-internal extension Bundle {
-    // MARK: - Internal Functions
-    var frameworkBundle: Bundle? {
-        return .init(identifier: "com.kosoku.Feige") ?? Bundle.main.privateFrameworksURL?.appendingPathComponent("Feige.framework", isDirectory: true).appendingPathComponent("Feige.bundle", isDirectory: true).let({
-            Bundle.init(url: $0)
-        }) ?? Bundle.main.url(forResource: "Feige", withExtension: "bundle")?.let({
-            Bundle.init(url: $0)
-        })
+    
+    // MARK: - Private Properties
+    private static let _cache = NSCache<NSNumber, Bundle>()
+    
+    // MARK: - Public Functions
+    /**
+     Returns the bundle value for the provided `key`.
+     
+     - Parameter key: The bundle key
+     - Returns: The bundle value
+     */
+    func valueForInfoDictionaryKey(_ key: Key) -> Any? {
+        self.object(forInfoDictionaryKey: key.rawValue)
     }
 }

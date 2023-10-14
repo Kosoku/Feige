@@ -32,20 +32,54 @@ internal extension Bundle {
 
 public extension Bundle {
     // MARK: - Public Types
-    struct Key: RawRepresentable {
+    /**
+     Represents a single info dictionary key.
+     */
+    struct InfoDictionaryKey: RawRepresentable {
         // MARK: - Public Properties
-        static let identifier = Key("CFBundleIdentifier")
-        static let displayName = Key("CFBundleDisplayName")
-        static let executable = Key("CFBundleExecutable")
-        static let shortVersionString = Key("CFBundleShortVersionString")
-        static let version = Key("CFBundleVersion")
+        /**
+         The bundle identifier.
+         */
+        public static let identifier = InfoDictionaryKey("CFBundleIdentifier")
+        /**
+         The bundle display name.
+         */
+        public static let displayName = InfoDictionaryKey("CFBundleDisplayName")
+        /**
+         The bundle executable.
+         */
+        public static let executable = InfoDictionaryKey("CFBundleExecutable")
+        /**
+         The bundle short version string.
+         */
+        public static let shortVersionString = InfoDictionaryKey("CFBundleShortVersionString")
+        /**
+         The bundle version.
+         */
+        public static let version = InfoDictionaryKey("CFBundleVersion")
         
+        // MARK: -
+        /**
+         The raw backing value.
+         */
         public let rawValue: String
         
         // MARK: - Initializers
+        /**
+         Creates an instance with the provided `rawValue`.
+         
+         - Parameter rawValue: The raw backing value
+         - Returns: The instance
+         */
         public init(_ rawValue: String) {
             self.rawValue = rawValue
         }
+        /**
+         Creates an instance with the provided `rawValue`.
+         
+         - Parameter rawValue: The raw backing value
+         - Returns: The instance
+         */
         public init(rawValue: String) {
             self.rawValue = rawValue
         }
@@ -53,7 +87,9 @@ public extension Bundle {
     
     // MARK: - Public Properties
     /**
-     Returns the current bundle based on the calling context. For example, if you call this property within a framework, it will return the framework bundle. If you call this property in the main app, it will return the main bundle.
+     Returns the current bundle based on the calling context.
+     
+     For example, if you call this property within a framework, it will return the framework bundle. If you call this property in the main app, it will return the main bundle.
      */
     static var current: Bundle? {
         let caller = Thread.callStackReturnAddresses[1]
@@ -115,12 +151,12 @@ public extension Bundle {
     
     // MARK: - Public Functions
     /**
-     Returns the bundle value for the provided `key`.
+     Returns the value for the provided info dictionary `key`.
      
-     - Parameter key: The bundle key
-     - Returns: The bundle value
+     - Parameter key: The info dictionary key
+     - Returns: The info dictionary value
      */
-    func valueForInfoDictionaryKey(_ key: Key) -> Any? {
+    func valueForInfoDictionaryKey(_ key: InfoDictionaryKey) -> Any? {
         self.object(forInfoDictionaryKey: key.rawValue)
     }
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Feige'
-  s.version          = '1.3.0'
+  s.version          = '1.4.0'
   s.summary          = 'Feige is a Swift iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
   s.description      = <<-DESC
@@ -9,7 +9,7 @@ Feige is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` frame
 
   s.homepage         = 'https://github.com/Kosoku/Feige'
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE.txt' }
-  s.author           = { 'William Towe' => 'willbur1984@gmail.com' }
+  s.authors           = { 'Jason Anderson' => 'jason@kosoku.com', 'William Towe' => 'willbur1984@gmail.com' }
   s.source           = { :git => 'https://github.com/Kosoku/Feige.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '13.0'

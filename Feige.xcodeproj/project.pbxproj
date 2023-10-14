@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74768C172ADB335700C0EABB /* BundleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74768C162ADB335700C0EABB /* BundleExtensionsTests.swift */; };
 		74DD80882ADAFD1800021852 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */; };
 		74DD808A2ADB154F00021852 /* OSLog+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD80892ADB154F00021852 /* OSLog+Extensions.swift */; };
 		7928AA2E2ABF9F7800F94EDF /* Feige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7928AA232ABF9F7800F94EDF /* Feige.framework */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74768C162ADB335700C0EABB /* BundleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionsTests.swift; sourceTree = "<group>"; };
 		74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		74DD80892ADB154F00021852 /* OSLog+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extensions.swift"; sourceTree = "<group>"; };
 		7928AA232ABF9F7800F94EDF /* Feige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				79FF9BBE2AD2172D00B1D8DE /* KeyPathExtensionsTests.swift */,
 				79FF9BC02AD2182900B1D8DE /* NSDecimalNumberExtensionsTests.swift */,
 				79FF9BC22AD21D8D00B1D8DE /* OptionalExtensionsTests.swift */,
+				74768C162ADB335700C0EABB /* BundleExtensionsTests.swift */,
 			);
 			path = FeigeTests;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				7928AA332ABF9F7800F94EDF /* ScopeFunctionsTests.swift in Sources */,
 				796567F32AD213D8007EE6CB /* EmptyableTests.swift in Sources */,
 				79FF9BC32AD21D8D00B1D8DE /* OptionalExtensionsTests.swift in Sources */,
+				74768C172ADB335700C0EABB /* BundleExtensionsTests.swift in Sources */,
 				799322DB2AC52A3500AAD49C /* BoolExtensionsTests.swift in Sources */,
 				79FF9BBD2AD2161300B1D8DE /* ArrayExtensionsTests.swift in Sources */,
 				79FF9BBF2AD2172D00B1D8DE /* KeyPathExtensionsTests.swift in Sources */,

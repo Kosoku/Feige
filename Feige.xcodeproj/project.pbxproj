@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74DD80882ADAFD1800021852 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */; };
+		74DD808A2ADB154F00021852 /* OSLog+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD80892ADB154F00021852 /* OSLog+Extensions.swift */; };
 		7928AA2E2ABF9F7800F94EDF /* Feige.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7928AA232ABF9F7800F94EDF /* Feige.framework */; };
 		7928AA332ABF9F7800F94EDF /* ScopeFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928AA322ABF9F7800F94EDF /* ScopeFunctionsTests.swift */; };
 		7928AA342ABF9F7800F94EDF /* Feige.h in Headers */ = {isa = PBXBuildFile; fileRef = 7928AA262ABF9F7800F94EDF /* Feige.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		74DD80892ADB154F00021852 /* OSLog+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extensions.swift"; sourceTree = "<group>"; };
 		7928AA232ABF9F7800F94EDF /* Feige.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feige.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928AA262ABF9F7800F94EDF /* Feige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feige.h; sourceTree = "<group>"; };
 		7928AA2D2ABF9F7800F94EDF /* FeigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,8 @@
 				796567EC2AD20545007EE6CB /* KeyPath+Extensions.swift */,
 				796567EE2AD2073F007EE6CB /* NSDecimalNumber+Extensions.swift */,
 				796567F02AD21179007EE6CB /* Optional+Extensions.swift */,
+				74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */,
+				74DD80892ADB154F00021852 /* OSLog+Extensions.swift */,
 			);
 			path = Feige;
 			sourceTree = "<group>";
@@ -252,12 +258,14 @@
 				796567DF2AD1E770007EE6CB /* IndirectReference.swift in Sources */,
 				796567F12AD21179007EE6CB /* Optional+Extensions.swift in Sources */,
 				796567EF2AD2073F007EE6CB /* NSDecimalNumber+Extensions.swift in Sources */,
+				74DD80882ADAFD1800021852 /* Bundle+Extensions.swift in Sources */,
 				796567E72AD1FAC9007EE6CB /* EmptyValueRepresentable.swift in Sources */,
 				796567EB2AD2022F007EE6CB /* Error+Extensions.swift in Sources */,
 				796567E12AD1E9A7007EE6CB /* WeakReference.swift in Sources */,
 				796567E92AD1FD4E007EE6CB /* Array+Extensions.swift in Sources */,
 				7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */,
 				796567ED2AD20545007EE6CB /* KeyPath+Extensions.swift in Sources */,
+				74DD808A2ADB154F00021852 /* OSLog+Extensions.swift in Sources */,
 				799322D92AC5294C00AAD49C /* Bool+Extensions.swift in Sources */,
 				796567E32AD1EDAF007EE6CB /* ReadWriteLock.swift in Sources */,
 				796567E52AD1F16C007EE6CB /* Emptyable.swift in Sources */,

@@ -51,7 +51,8 @@ public final class WeakReference<T>: NSObject {
         self._value as? T
     }
     
-    // MARK: - Override Properties
+    // MARK: - Override Properties :nodoc:
+    @_documentation(visibility: internal)
     public override var hash: Int {
         self.memoryAddress
     }
@@ -60,7 +61,8 @@ public final class WeakReference<T>: NSObject {
     private let memoryAddress: Int
     private weak var _value: AnyObject?
     
-    // MARK: - Override Functions
+    // MARK: - Override Functions :nodoc:
+    @_documentation(visibility: internal)
     public override func isEqual(_ object: Any?) -> Bool {
         guard let reference = object as? WeakReference else {
             return false

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>WeakReference Class Reference</title>
+    <title>Bundle Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/WeakReference" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Bundle" class="dashAnchor"></a>
 
-    <a title="WeakReference Class Reference"></a>
+    <a title="Bundle Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      WeakReference Class Reference
+      Bundle Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -222,39 +222,61 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>WeakReference</h1>
+            <h1>Bundle</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">WeakReference</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Bundle</span></code></pre>
 
                 </div>
               </div>
-            <p>Allows weakly reference another object.</p>
-<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">MyClass</span> <span class="p">{</span>
-   <span class="c1">// MARK: - Private Properties</span>
-   <span class="kd">private</span> <span class="k">let</span> <span class="nv">weakReference</span><span class="p">:</span> <span class="kt">WeakReference</span><span class="o">&lt;</span><span class="kt">MyOtherClass</span><span class="o">&gt;</span>
-
-   <span class="c1">// MARK: Public Functions</span>
-   <span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
-       <span class="k">guard</span> <span class="k">let</span> <span class="nv">reference</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">weakReference</span><span class="o">.</span><span class="n">value</span> <span class="k">else</span> <span class="p">{</span>
-           <span class="k">return</span>
-       <span class="p">}</span>
-       <span class="c1">// do something with reference which is non-nil</span>
-   <span class="p">}</span>
-
-   <span class="c1">// MARK: Initializers</span>
-   <span class="nf">init</span><span class="p">(</span><span class="nv">myOtherClass</span><span class="p">:</span> <span class="kt">MyOtherClass</span><span class="p">)</span> <span class="p">{</span>
-       <span class="k">self</span><span class="o">.</span><span class="n">weakReference</span> <span class="o">=</span> <span class="kt">WeakReference</span><span class="p">(</span><span class="n">myOtherClass</span><span class="p">)</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-
+            
           </div>
         </section>
 
         <section class="section">
           <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Types"></a>
+                <a name="//apple_ref/swift/Section/Public Types" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Types"></a>
+                  <h3 class="section-name"><span>Public Types</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE17InfoDictionaryKeyV"></a>
+                    <a name="//apple_ref/swift/Struct/InfoDictionaryKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE17InfoDictionaryKeyV">InfoDictionaryKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a single info dictionary key.</p>
+
+                        <a href="../Extensions/Bundle/InfoDictionaryKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">InfoDictionaryKey</span> <span class="p">:</span> <span class="kt">RawRepresentable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Public%20Properties"></a>
@@ -269,9 +291,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Feige13WeakReferenceC5valuexSgvp"></a>
-                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Feige13WeakReferenceC5valuexSgvp">value</a>
+                    <a name="/s:So8NSBundleC5FeigeE7currentABSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/current" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE7currentABSgvpZ">current</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -279,14 +301,151 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the weakly referenced value.</p>
+                        <p>Returns the current bundle based on the calling context.</p>
+
+<p>For example, if you call this property within a framework, it will return the framework bundle. If you call this property in the main app, it will return the main bundle.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE10identifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE10identifierSSSgvp">identifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the bundle identifier. For example, <em>com.mycompany.app</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE11displayNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/displayName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE11displayNameSSSgvp">displayName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the bundle display name. For example, <em>App</em>. This value is localized.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">displayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE10executableSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE10executableSSSgvp">executable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the bundle executable. For example, <em>App</em>. This value is not localized.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">executable</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE18shortVersionStringSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/shortVersionString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE18shortVersionStringSSSgvp">shortVersionString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the bundle short version string. For example, <em>1.0.0</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">shortVersionString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So8NSBundleC5FeigeE7versionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE7versionSSSgvp">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the bundle version. For example, <em>1</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -297,11 +456,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Initializers"></a>
-                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a name="/Public%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Initializers"></a>
-                  <h3 class="section-name"><span>Initializers</span>
+                  <a class="section-name-link" href="#/Public%20Functions"></a>
+                  <h3 class="section-name"><span>Public Functions</span>
 </h3>
                 </div>
               </div>
@@ -309,9 +468,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Feige13WeakReferenceCyACyxGxcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Feige13WeakReferenceCyACyxGxcfc">init(_:<wbr>)</a>
+                    <a name="/s:So8NSBundleC5FeigeE25valueForInfoDictionaryKeyyypSgAbCE0efG0VF"></a>
+                    <a name="//apple_ref/swift/Method/valueForInfoDictionaryKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So8NSBundleC5FeigeE25valueForInfoDictionaryKeyyypSgAbCE0efG0VF">valueForInfoDictionaryKey(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -319,14 +478,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates an instance that weakly references the provided <code><a href="../Classes/WeakReference.html#/s:5Feige13WeakReferenceC5valuexSgvp">value</a></code>.</p>
+                        <p>Returns the value for the provided info dictionary <code>key</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">valueForInfoDictionaryKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Extensions/Bundle/InfoDictionaryKey.html">InfoDictionaryKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -337,12 +496,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>value</em>
+                                <em>key</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object to weakly reference</p>
+                                  <p>The info dictionary key</p>
                                 </div>
                               </td>
                             </tr>
@@ -351,7 +510,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The instance</p>
+                        <p>The info dictionary value</p>
                       </div>
                     </section>
                   </div>

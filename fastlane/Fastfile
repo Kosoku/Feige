@@ -51,7 +51,7 @@ platform :ios do
     Dir.chdir("..") do
       tag_name = prompt(text: "Tag name: ")
       
-      sh("git tag -a -m \"Version #{tag_name}\"")
+      sh("git tag -a #{tag_name} -m \"Version #{tag_name}\"")
     end
   end
 end

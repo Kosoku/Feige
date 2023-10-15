@@ -44,5 +44,14 @@ platform :ios do
       sh("git add .")
       sh("git commit -a -m \"Update docs\"")
     end
-  end  
+  end
+
+  desc "Create git tag"
+  lane :create_git_tag do
+    Dir.chdir("..") do
+      tag_name = prompt(text: "Tag name: ")
+      
+      sh("git tag -a -m \"Version #{tag_name}\"")
+    end
+  end
 end

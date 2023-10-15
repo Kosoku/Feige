@@ -16,8 +16,33 @@
 default_platform(:ios)
 
 platform :ios do
+  podspec_name = "Feige.podspec"
+
   desc "Description of what the lane does"
   lane :unit_tests do
     run_tests(scheme: "Feige")
   end
+
+  desc "Lint local podspec"
+  lane :lint_local_podspec do
+    Dir.chdir("..") do
+      sh("bundle exec pod lib lint #{podspec_name}")
+    end
+  end
+
+  desc "Lint remote podspec"
+  lane :lint_remote_podspec do
+    Dir.chdir("..") do
+      sh("bundle exec pod spec lint #{podspec_name}")
+    end
+  end
+
+  desc "Update docs"
+  lane :update_docs do
+    Dir.chdir("..") do
+      sh("./scripts/jazzy.sh")
+      sh("git add .")
+      sh("git commit -a -m \"Update docs\"")
+    end
+  end  
 end

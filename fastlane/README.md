@@ -23,6 +23,30 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Description of what the lane does
 
+### ios lint_local_podspec
+
+```sh
+[bundle exec] fastlane ios lint_local_podspec
+```
+
+Lint local podspec
+
+### ios lint_remote_podspec
+
+```sh
+[bundle exec] fastlane ios lint_remote_podspec
+```
+
+Lint remote podspec
+
+### ios update_docs
+
+```sh
+[bundle exec] fastlane ios update_docs
+```
+
+Update docs
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

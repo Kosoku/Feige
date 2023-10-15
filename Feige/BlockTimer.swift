@@ -21,6 +21,18 @@ import Foundation
 
 /**
  Block based timer that uses *Grand Central Dispatch* internally.
+ 
+ ```
+ final class MyClass {
+    private let timer: BlockTimer
+ 
+    init() {
+        self.timer = .scheduled(timeInterval: 1.0, repeats: true) { _ in
+            // do something every 1 second
+        }
+    }
+ }
+ ```
  */
 public final class BlockTimer: ScopeFunctions {
     // MARK: - Public Types

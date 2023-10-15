@@ -85,13 +85,13 @@
 		7928AA262ABF9F7800F94EDF /* Feige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feige.h; sourceTree = "<group>"; };
 		7928AA2D2ABF9F7800F94EDF /* FeigeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeigeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928AA322ABF9F7800F94EDF /* ScopeFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctionsTests.swift; sourceTree = "<group>"; };
-		7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeFunctions.swift; sourceTree = "<group>"; };
+		7928AA3D2ABFA0D500F94EDF /* ScopeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScopeFunctions.swift; path = ../ScopeFunctions.swift; sourceTree = "<group>"; };
 		7928AA412ABFDA7A00F94EDF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		796567DE2AD1E770007EE6CB /* IndirectReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndirectReference.swift; sourceTree = "<group>"; };
+		796567DE2AD1E770007EE6CB /* IndirectReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndirectReference.swift; path = ../IndirectReference.swift; sourceTree = "<group>"; };
 		796567E02AD1E9A7007EE6CB /* WeakReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakReference.swift; sourceTree = "<group>"; };
 		796567E22AD1EDAF007EE6CB /* ReadWriteLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteLock.swift; sourceTree = "<group>"; };
-		796567E42AD1F16C007EE6CB /* Emptyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emptyable.swift; sourceTree = "<group>"; };
-		796567E62AD1FAC9007EE6CB /* EmptyValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyValueRepresentable.swift; sourceTree = "<group>"; };
+		796567E42AD1F16C007EE6CB /* Emptyable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Emptyable.swift; path = ../Emptyable.swift; sourceTree = "<group>"; };
+		796567E62AD1FAC9007EE6CB /* EmptyValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmptyValueRepresentable.swift; path = ../EmptyValueRepresentable.swift; sourceTree = "<group>"; };
 		796567E82AD1FD4E007EE6CB /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		796567EA2AD2022F007EE6CB /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
 		796567EC2AD20545007EE6CB /* KeyPath+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyPath+Extensions.swift"; sourceTree = "<group>"; };

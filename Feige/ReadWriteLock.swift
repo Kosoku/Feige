@@ -76,7 +76,7 @@ public final class ReadWriteLock<T> {
         let label = label ?? String(describing: T.self)
         
         self.label = label
-        self.queue = DispatchQueue(label: "com.kosoku.feige.\(ReadWriteLock.self).\(label)", qos: qualityOfService, attributes: .concurrent, target: .global(qos: qualityOfService.qosClass))
+        self.queue = DispatchQueue(label: "\(String.bundleIdentifier).\(ReadWriteLock.self).\(label)", qos: qualityOfService, attributes: .concurrent, target: .global(qos: qualityOfService.qosClass))
         self._value = value
     }
 }

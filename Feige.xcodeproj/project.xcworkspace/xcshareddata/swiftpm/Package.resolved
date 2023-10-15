@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "romita",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Kosoku/Romita",
+      "state" : {
+        "revision" : "b09d4ee66757b7185bcb1f41c98b2e87f05f14fd",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

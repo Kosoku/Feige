@@ -21,8 +21,8 @@ import Foundation
 
 internal extension Bundle {
     // MARK: - Internal Functions
-    var frameworkBundle: Bundle? {
-        .init(identifier: "com.kosoku.Feige") ?? Bundle.main.privateFrameworksURL?.appendingPathComponent("Feige.framework", isDirectory: true).appendingPathComponent("Feige.bundle", isDirectory: true).let({
+    static var frameworkBundle: Bundle? {
+        .init(identifier: .bundleIdentifier) ?? Bundle.main.privateFrameworksURL?.appendingPathComponent("Feige.framework", isDirectory: true).appendingPathComponent("Feige.bundle", isDirectory: true).let({
             Bundle.init(url: $0)
         }) ?? Bundle.main.url(forResource: "Feige", withExtension: "bundle")?.let({
             Bundle.init(url: $0)

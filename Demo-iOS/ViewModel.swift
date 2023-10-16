@@ -38,20 +38,25 @@ final class ViewModel {
         }
     }
     enum Item: Hashable {
-        case timer
+        case blockTimer
+        case dateExtensions
         
         // MARK: - Public Properties
         var title: String {
             switch self {
-            case .timer:
-                return "Timer"
+            case .blockTimer:
+                return "BlockTimer"
+            case .dateExtensions:
+                return "Date Extensions"
             }
         }
         
         var viewControllerForPushing: UIViewController? {
             switch self {
-            case .timer:
+            case .blockTimer:
                 return BlockTimerViewController()
+            case .dateExtensions:
+                return DateExtensionsViewController()
             }
         }
     }
@@ -67,7 +72,7 @@ final class ViewModel {
         self.snapshot = Snapshot()
             .also {
                 $0.appendSections([.classes])
-                $0.appendItems([.timer], toSection: .classes)
+                $0.appendItems([.blockTimer, .dateExtensions], toSection: .classes)
             }
     }
 }

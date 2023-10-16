@@ -202,6 +202,8 @@ extension Double: ScopeFunctions {}
 
 extension Date: ScopeFunctions {}
 
+extension DateComponents: ScopeFunctions {}
+
 extension String: ScopeFunctions {}
 
 extension URL: ScopeFunctions {}

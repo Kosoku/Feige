@@ -1,8 +1,8 @@
 //
-//  BlockTimerViewController.swift
+//  DateExtensionsViewController.swift
 //  Demo-iOS
 //
-//  Created by William Towe on 10/15/23.
+//  Created by William Towe on 10/16/23.
 //  Copyright © 2023 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +23,7 @@ import os.log
 import Romita
 import UIKit
 
-final class BlockTimerViewController: UIViewController {
+final class DateExtensionsViewController: UIViewController {
     // MARK: - Private Properties
     private let stackView = UIStackView()
         .setTranslatesAutoresizingMaskIntoConstraints()
@@ -31,48 +31,26 @@ final class BlockTimerViewController: UIViewController {
             $0.axis = .vertical
             $0.alignment = .center
         }
-    private let onceButton = UIButton(type: .system)
+    private let datePicker = UIDatePicker()
         .setTranslatesAutoresizingMaskIntoConstraints()
-        .also {
-            $0.setTitle("Once Timer", for: .normal)
-        }
-    private let repeatingButton = UIButton(type: .system)
-        .setTranslatesAutoresizingMaskIntoConstraints()
-        .also {
-            $0.setTitle("Repeating Timer", for: .normal)
-        }
-    
-    private var onceTimer: BlockTimer?
-    private var repeatingTimer: BlockTimer?
     
     // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = ViewModel.Item.blockTimer.title
+        self.title = ViewModel.Item.dateExtensions.title
         self.view.backgroundColor = .systemBackground
         self.view.addSubview(self.stackView.also {
-            $0.addArrangedSubviews([self.onceButton.also {
-                $0.addTarget(self, action: #selector(onceButtonAction(sender:)), for: .touchUpInside)
-            }, self.repeatingButton.also {
-                $0.addTarget(self, action: #selector(repeatingButtonAction(sender:)), for: .touchUpInside)
-            }])
+            $0.addArrangedSubview(self.datePicker.also {
+                $0.addTarget(self, action: #selector(datePickerAction(sender:)), for: .valueChanged)
+            })
         })
         self.stackView.pinToSuperviewEdges([.leading, .trailing], safeAreaLayoutGuideEdges: .top)
     }
     
     // MARK: - Private Functions
     @objc
-    private func onceButtonAction(sender: UIButton) {
-        self.onceTimer = .scheduled(timeInterval: 1.0) { _ in
-            os_log("once timer", log: .viewController)
-        }
-    }
-    
-    @objc
-    private func repeatingButtonAction(sender: UIButton) {
-        self.repeatingTimer = .scheduled(timeInterval: 1.0, repeats: true) { _ in
-            os_log("repeating timer", log: .viewController)
-        }
+    private func datePickerAction(sender: UIDatePicker) {
+        os_log("second %@\nminute %@\nhour %@\nday %@\nmonth %@\nyear %@\nstarOfDay %@\nendOfDay %@\nstartOfWeek %@\nendOfWeek %@\nstartOfMonth %@\nendOfMonth %@\nstartOfYear %@\nendOfYear %@", log: .viewController, String(describing: sender.date.second), String(describing: sender.date.minute), String(describing: sender.date.hour), String(describing: sender.date.day), String(describing: sender.date.month), String(describing: sender.date.year), String(describing: sender.date.startOfDay), String(describing: sender.date.endOfDay), String(describing: sender.date.startOfWeek), String(describing: sender.date.endOfWeek), String(describing: sender.date.startOfMonth), String(describing: sender.date.endOfMonth), String(describing: sender.date.startOfYear), String(describing: sender.date.endOfYear))
     }
 }

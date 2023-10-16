@@ -40,6 +40,9 @@
 		79B4E0382ADC963D0073D2B0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4E0372ADC963D0073D2B0 /* ViewModel.swift */; };
 		79B4E03B2ADC983C0073D2B0 /* Romita in Frameworks */ = {isa = PBXBuildFile; productRef = 79B4E03A2ADC983C0073D2B0 /* Romita */; };
 		79B4E03D2ADC99AC0073D2B0 /* BlockTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4E03C2ADC99AC0073D2B0 /* BlockTimerViewController.swift */; };
+		79B4E0432ADCDDC70073D2B0 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4E0422ADCDDC70073D2B0 /* FileManager+Extensions.swift */; };
+		79B4E0492ADCED100073D2B0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4E0482ADCED100073D2B0 /* Date+Extensions.swift */; };
+		79B4E04B2ADCF5CB0073D2B0 /* DateExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4E04A2ADCF5CB0073D2B0 /* DateExtensionsViewController.swift */; };
 		79FF9BBD2AD2161300B1D8DE /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF9BBC2AD2161300B1D8DE /* ArrayExtensionsTests.swift */; };
 		79FF9BBF2AD2172D00B1D8DE /* KeyPathExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF9BBE2AD2172D00B1D8DE /* KeyPathExtensionsTests.swift */; };
 		79FF9BC12AD2182900B1D8DE /* NSDecimalNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF9BC02AD2182900B1D8DE /* NSDecimalNumberExtensionsTests.swift */; };
@@ -113,6 +116,9 @@
 		79B4E0372ADC963D0073D2B0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		79B4E03C2ADC99AC0073D2B0 /* BlockTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTimerViewController.swift; sourceTree = "<group>"; };
 		79B4E03E2ADCB03D0073D2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79B4E0422ADCDDC70073D2B0 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		79B4E0482ADCED100073D2B0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		79B4E04A2ADCF5CB0073D2B0 /* DateExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsViewController.swift; sourceTree = "<group>"; };
 		79FF9BBC2AD2161300B1D8DE /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		79FF9BBE2AD2172D00B1D8DE /* KeyPathExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathExtensionsTests.swift; sourceTree = "<group>"; };
 		79FF9BC02AD2182900B1D8DE /* NSDecimalNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensionsTests.swift; sourceTree = "<group>"; };
@@ -204,7 +210,9 @@
 				799322D82AC5294C00AAD49C /* Bool+Extensions.swift */,
 				74DD80872ADAFD1800021852 /* Bundle+Extensions.swift */,
 				79B4E00D2ADC62FC0073D2B0 /* CGRect+Extensions.swift */,
+				79B4E0482ADCED100073D2B0 /* Date+Extensions.swift */,
 				796567EA2AD2022F007EE6CB /* Error+Extensions.swift */,
+				79B4E0422ADCDDC70073D2B0 /* FileManager+Extensions.swift */,
 				796567EC2AD20545007EE6CB /* KeyPath+Extensions.swift */,
 				796567EE2AD2073F007EE6CB /* NSDecimalNumber+Extensions.swift */,
 				796567F02AD21179007EE6CB /* Optional+Extensions.swift */,
@@ -250,6 +258,7 @@
 				79B4E0372ADC963D0073D2B0 /* ViewModel.swift */,
 				79B4E0232ADC96150073D2B0 /* ViewController.swift */,
 				79B4E03C2ADC99AC0073D2B0 /* BlockTimerViewController.swift */,
+				79B4E04A2ADCF5CB0073D2B0 /* DateExtensionsViewController.swift */,
 				79B4E0282ADC96180073D2B0 /* Assets.xcassets */,
 				79B4E02A2ADC96180073D2B0 /* LaunchScreen.storyboard */,
 				79B4E02D2ADC96180073D2B0 /* Info.plist */,
@@ -422,6 +431,7 @@
 				796567EB2AD2022F007EE6CB /* Error+Extensions.swift in Sources */,
 				79B4E0162ADC69030073D2B0 /* BlockTimer.swift in Sources */,
 				796567E12AD1E9A7007EE6CB /* WeakReference.swift in Sources */,
+				79B4E0492ADCED100073D2B0 /* Date+Extensions.swift in Sources */,
 				796567E92AD1FD4E007EE6CB /* Array+Extensions.swift in Sources */,
 				7928AA402ABFCE8F00F94EDF /* ScopeFunctions.swift in Sources */,
 				796567ED2AD20545007EE6CB /* KeyPath+Extensions.swift in Sources */,
@@ -430,6 +440,7 @@
 				799322D92AC5294C00AAD49C /* Bool+Extensions.swift in Sources */,
 				796567E32AD1EDAF007EE6CB /* ReadWriteLock.swift in Sources */,
 				796567E52AD1F16C007EE6CB /* Emptyable.swift in Sources */,
+				79B4E0432ADCDDC70073D2B0 /* FileManager+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +465,7 @@
 			files = (
 				79B4E03D2ADC99AC0073D2B0 /* BlockTimerViewController.swift in Sources */,
 				79B4E0242ADC96150073D2B0 /* ViewController.swift in Sources */,
+				79B4E04B2ADCF5CB0073D2B0 /* DateExtensionsViewController.swift in Sources */,
 				79B4E0202ADC96150073D2B0 /* AppDelegate.swift in Sources */,
 				79B4E0382ADC963D0073D2B0 /* ViewModel.swift in Sources */,
 				79B4E0222ADC96150073D2B0 /* SceneDelegate.swift in Sources */,

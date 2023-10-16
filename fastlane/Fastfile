@@ -51,7 +51,7 @@ platform :ios do
   desc "Create git tag"
   lane :create_git_tag do
     Dir.chdir("..") do
-      tag_name = prompt(text: "Tag name: ")
+      tag_name = sh("./scripts/print_info_plist_key.sh #{plist_bundle_short_version_string_key}").strip()
       
       sh("git tag -a #{tag_name} -m \"Version #{tag_name}\"")
     end

@@ -25,11 +25,13 @@ final class OptionalExtensionsTests: XCTest {
         let value: String? = nil
         
         XCTAssertTrue(value.isNil)
+        XCTAssertFalse(value.isNotNil)
     }
     
     func testIsNotNil() throws {
         let value: String? = ""
         
         XCTAssertTrue(value.isNotNil)
+        XCTAssertFalse(value.isNil)
     }
 }

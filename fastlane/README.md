@@ -55,6 +55,14 @@ Update docs
 
 Create git tag
 
+### ios set_short_version_string
+
+```sh
+[bundle exec] fastlane ios set_short_version_string
+```
+
+Set short version string
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

@@ -16,7 +16,9 @@
 default_platform(:ios)
 
 platform :ios do
+  info_plist_path = "Feige/Info.plist"
   podspec_name = "Feige.podspec"
+  plist_bundle_short_version_string_key = "CFBundleShortVersionString"
 
   desc "Description of what the lane does"
   lane :unit_tests do
@@ -52,6 +54,17 @@ platform :ios do
       tag_name = prompt(text: "Tag name: ")
       
       sh("git tag -a #{tag_name} -m \"Version #{tag_name}\"")
+    end
+  end
+
+  desc "Set short version string"
+  lane :set_short_version_string do
+    Dir.chdir("..") do
+      short_version_string = prompt(text: "Short version string: ")
+
+      sh("./scripts/set_info_plist_key.sh #{plist_bundle_short_version_string_key} #{short_version_string}")
+      sh("./scripts/set_podspec_version.sh #{short_version_string}")
+      sh("git commit -a -m \"Bump version to #{short_version_string}\"")
     end
   end
 end

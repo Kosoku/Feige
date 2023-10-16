@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          Feige 2.0.1 Docs
+          Feige 2.1.0 Docs
         </a>
          (100% documented)
       </p>
@@ -60,6 +60,9 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BlockTimer.html">BlockTimer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ReadWriteLock.html">ReadWriteLock</a>
               </li>
               <li class="nav-group-task">
@@ -92,7 +95,7 @@
                 <a class="nav-group-task-link" href="Extensions.html#/c:@S@CGPoint">CGPoint</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions.html#/c:@S@CGRect">CGRect</a>
+                <a class="nav-group-task-link" href="Extensions/CGRect.html">CGRect</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions.html#/c:@S@CGSize">CGSize</a>
@@ -232,6 +235,44 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Feige10BlockTimerC"></a>
+                    <a name="//apple_ref/swift/Class/BlockTimer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Feige10BlockTimerC">BlockTimer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Block based timer that uses <em>Grand Central Dispatch</em> internally.</p>
+<pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">MyClass</span> <span class="p">{</span>
+   <span class="kd">private</span> <span class="k">let</span> <span class="nv">timer</span><span class="p">:</span> <span class="kt">BlockTimer</span>
+
+   <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+       <span class="k">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="o">.</span><span class="nf">scheduled</span><span class="p">(</span><span class="nv">timeInterval</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="nv">repeats</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+           <span class="c1">// do something every 1 second</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Classes/BlockTimer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">BlockTimer</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>

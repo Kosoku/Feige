@@ -39,6 +39,14 @@ Lint local podspec
 
 Lint remote podspec
 
+### ios push_remote_podspec
+
+```sh
+[bundle exec] fastlane ios push_remote_podspec
+```
+
+Push remote podspec
+
 ### ios update_docs
 
 ```sh

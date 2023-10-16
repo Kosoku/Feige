@@ -55,12 +55,13 @@ platform :ios do
     end
   end
 
-  desc "Create git tag"
-  lane :create_git_tag do
+  desc "Create push git tag"
+  lane :create_push_git_tag do
     Dir.chdir("..") do
       tag_name = sh("./scripts/print_info_plist_key.sh #{plist_bundle_short_version_string_key}").strip()
       
       sh("git tag -a #{tag_name} -m \"Version #{tag_name}\"")
+      sh("git push --follow-tags")
     end
   end
 

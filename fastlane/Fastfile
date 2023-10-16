@@ -39,6 +39,13 @@ platform :ios do
     end
   end
 
+  desc "Push remote podspec"
+  lane :push_remote_podspec do
+    Dir.chdir("..") do
+      sh("bundle exec pod trunk push #{podspec_name}")
+    end
+  end
+
   desc "Update docs"
   lane :update_docs do
     Dir.chdir("..") do

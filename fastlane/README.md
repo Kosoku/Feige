@@ -21,7 +21,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios unit_tests
 ```
 
-Description of what the lane does
+Unit tests
+
+### ios code_coverage_generate
+
+```sh
+[bundle exec] fastlane ios code_coverage_generate
+```
+
+Code coverage generate
 
 ### ios lint_local_podspec
 
@@ -55,13 +63,13 @@ Push remote podspec
 
 Update docs
 
-### ios create_git_tag
+### ios create_push_git_tag
 
 ```sh
-[bundle exec] fastlane ios create_git_tag
+[bundle exec] fastlane ios create_push_git_tag
 ```
 
-Create git tag
+Create push git tag
 
 ### ios set_short_version_string
 

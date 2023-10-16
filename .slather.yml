@@ -1,0 +1,3 @@
+coverage_service: cobertura_xml
+xcodeproj: Feige.xcodeproj
+scheme: Feige

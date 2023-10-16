@@ -20,9 +20,16 @@ platform :ios do
   podspec_name = "Feige.podspec"
   plist_bundle_short_version_string_key = "CFBundleShortVersionString"
 
-  desc "Description of what the lane does"
+  desc "Unit tests"
   lane :unit_tests do
     run_tests(scheme: "Feige")
+  end
+
+  desc "Code coverage generate"
+  lane :code_coverage_generate do
+    Dir.chdir("..") do
+      sh("bundle exec slather")
+    end
   end
 
   desc "Lint local podspec"

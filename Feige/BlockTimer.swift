@@ -99,7 +99,7 @@ public final class BlockTimer: ScopeFunctions {
     /**
      Schedules the timer to begin firing.
      
-     - Warning: Calling this more than once does nothing
+     - Important: Calling this multiple times has no effect
      */
     public func schedule() {
         self.scheduleOnce()
@@ -108,7 +108,7 @@ public final class BlockTimer: ScopeFunctions {
     /**
      Invalidates a previously scheduled timer.
      
-     - Warning: Calling this more than once does nothing
+     - Important: Calling this multiple times has no effect
      */
     public func invalidate() {
         guard self.timer.isCancelled.not() else {
@@ -120,7 +120,7 @@ public final class BlockTimer: ScopeFunctions {
     /**
      Invokes the block that was provided during initialization asynchronously on provided target queue.
      
-     - Warning: Calling this on a timer that has been invalidated does nothing
+     - Important: Calling this on a timer that has been invalidated does nothing
      */
     public func fire() {
         guard self.timer.isCancelled.not() else {

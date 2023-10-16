@@ -1,6 +1,7 @@
 ## Feige
 
 [![Unit Tests](https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/Kosoku/Feige/actions/workflows/unit_tests.yml)
+[![codecov](https://codecov.io/gh/Kosoku/Feige/graph/badge.svg?token=FMVO0VSCMY)](https://codecov.io/gh/Kosoku/Feige)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](http://img.shields.io/cocoapods/v/Feige.svg)](http://cocoapods.org/?q=Feige)
 [![Platform](http://img.shields.io/cocoapods/p/Feige.svg)]()

@@ -15,6 +15,30 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios print_info_plist_key
+
+```sh
+[bundle exec] fastlane ios print_info_plist_key
+```
+
+Print info plist key
+
+- `key`: The info plist key to print
+
+- `path`: The info plist path
+
+### ios update_docs
+
+```sh
+[bundle exec] fastlane ios update_docs
+```
+
+Update docs
+
+- `module`: The module name
+
+- `info_plist_path`: The path to the info plist
+
 ### ios unit_tests
 
 ```sh
@@ -54,14 +78,6 @@ Lint remote podspec
 ```
 
 Push remote podspec
-
-### ios update_docs
-
-```sh
-[bundle exec] fastlane ios update_docs
-```
-
-Update docs
 
 ### ios create_push_git_tag
 

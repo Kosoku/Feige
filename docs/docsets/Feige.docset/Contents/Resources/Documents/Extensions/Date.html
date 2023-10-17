@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>OSLog Extension Reference</title>
+    <title>Date Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/OSLog" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Date" class="dashAnchor"></a>
 
-    <a title="OSLog Extension Reference"></a>
+    <a title="Date Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      OSLog Extension Reference
+      Date Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -231,31 +231,38 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>OSLog</h1>
+            <h1>Date</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">OSLog</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Date</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Date</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Commonly used OSLog instances for use with <code>os_log</code> functions</p>
-<pre class="highlight swift"><code><span class="nf">os_log</span><span class="p">(</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span> <span class="nv">log</span><span class="p">:</span> <span class="o">.</span><span class="n">analytics</span><span class="p">,</span> <span class="s">"%@ %@"</span><span class="p">,</span> <span class="kd">#function</span><span class="p">,</span> <span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="k">self</span><span class="p">))</span>
-</code></pre>
-
+            
           </div>
         </section>
 
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Properties"></a>
+                  <h3 class="section-name"><span>Public Properties</span>
+</h3>
+                </div>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE9analyticsABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/analytics" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE9analyticsABvpZ">analytics</a>
+                    <a name="/s:10Foundation4DateV5FeigeE6secondSivp"></a>
+                    <a name="//apple_ref/swift/Property/second" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE6secondSivp">second</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -263,14 +270,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log analytics related info.</p>
+                        <p>Returns the second component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">analytics</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">second</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -280,9 +287,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE9extensionABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/extension" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE9extensionABvpZ">extension</a>
+                    <a name="/s:10Foundation4DateV5FeigeE6minuteSivp"></a>
+                    <a name="//apple_ref/swift/Property/minute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE6minuteSivp">minute</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -290,14 +297,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log within <code>extension</code> statements.</p>
+                        <p>Returns the minute component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">let</span> <span class="err">`</span><span class="kd">extension</span><span class="err">`</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">minute</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -307,9 +314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE7networkABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/network" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE7networkABvpZ">network</a>
+                    <a name="/s:10Foundation4DateV5FeigeE4hourSivp"></a>
+                    <a name="//apple_ref/swift/Property/hour" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE4hourSivp">hour</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -317,14 +324,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log network request/response related info.</p>
+                        <p>Returns the hour component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">network</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hour</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -334,9 +341,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE5modelABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/model" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE5modelABvpZ">model</a>
+                    <a name="/s:10Foundation4DateV5FeigeE3daySivp"></a>
+                    <a name="//apple_ref/swift/Property/day" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE3daySivp">day</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -344,14 +351,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log model related info (e.g. <code>CoreData</code>).</p>
+                        <p>Returns the day component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">day</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -361,9 +368,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE4viewABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/view" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE4viewABvpZ">view</a>
+                    <a name="/s:10Foundation4DateV5FeigeE5monthSivp"></a>
+                    <a name="//apple_ref/swift/Property/month" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE5monthSivp">month</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -371,14 +378,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log within view classes (e.g. <code>NSView</code>, <code>UIView</code>).</p>
+                        <p>Returns the month component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">month</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -388,9 +395,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE9viewModelABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/viewModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE9viewModelABvpZ">viewModel</a>
+                    <a name="/s:10Foundation4DateV5FeigeE4yearSivp"></a>
+                    <a name="//apple_ref/swift/Property/year" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE4yearSivp">year</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -398,14 +405,45 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log within view model classes.</p>
+                        <p>Returns the year component.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">year</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE10startOfDayACvp"></a>
+                    <a name="//apple_ref/swift/Property/startOfDay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE10startOfDayACvp">startOfDay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the start of the day.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">startOfDay</span><span class="p">:</span> <span class="kt">Date</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -415,9 +453,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So9OS_os_logC5FeigeE14viewControllerABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/viewController" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So9OS_os_logC5FeigeE14viewControllerABvpZ">viewController</a>
+                    <a name="/s:10Foundation4DateV5FeigeE8endOfDayACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endOfDay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE8endOfDayACSgvp">endOfDay</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -425,14 +463,176 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use to log within view controller classes (e.g. <code>NSViewController</code>, <code>UIViewController</code>).</p>
+                        <p>Returns a date representing the end of the day.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">OSLog</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">endOfDay</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE11startOfWeekACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startOfWeek" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE11startOfWeekACSgvp">startOfWeek</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the start of the week.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">startOfWeek</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE9endOfWeekACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endOfWeek" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE9endOfWeekACSgvp">endOfWeek</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the end of the week.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">endOfWeek</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE12startOfMonthACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startOfMonth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE12startOfMonthACSgvp">startOfMonth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the start of the month.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">startOfMonth</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE10endOfMonthACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endOfMonth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE10endOfMonthACSgvp">endOfMonth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the end of the month.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">endOfMonth</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE11startOfYearACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startOfYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE11startOfYearACSgvp">startOfYear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the start of the month.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">startOfYear</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation4DateV5FeigeE9endOfYearACSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endOfYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation4DateV5FeigeE9endOfYearACSgvp">endOfYear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a date representing the end of the month.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">endOfYear</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

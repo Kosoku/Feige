@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Set Extension Reference</title>
+    <title>FileManager Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Set" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/FileManager" class="dashAnchor"></a>
 
-    <a title="Set Extension Reference"></a>
+    <a title="FileManager Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Feige Reference</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Set Extension Reference
+      FileManager Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -231,13 +231,11 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Set</h1>
+            <h1>FileManager</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Set</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EmptyValueRepresentable.html">EmptyValueRepresentable</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Set</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Emptyable.html">Emptyable</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Set</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ScopeFunctions.html">ScopeFunctions</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">FileManager</span></code></pre>
 
                 </div>
               </div>
@@ -261,9 +259,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Feige23EmptyValueRepresentableP05emptyC0xvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/emptyValue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Feige23EmptyValueRepresentableP05emptyC0xvpZ">emptyValue</a>
+                    <a name="/s:So13NSFileManagerC5FeigeE20documentDirectoryURL10Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/documentDirectoryURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC5FeigeE20documentDirectoryURL10Foundation0F0VSgvp">documentDirectoryURL</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,15 +269,101 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Returns the document directory URL.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">emptyValue</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentDirectoryURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Public Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20Functions"></a>
+                  <h3 class="section-name"><span>Public Functions</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC5FeigeE30applicationSupportDirectoryURL10Foundation0G0VSgyKF"></a>
+                    <a name="//apple_ref/swift/Method/applicationSupportDirectoryURL()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC5FeigeE30applicationSupportDirectoryURL10Foundation0G0VSgyKF">applicationSupportDirectoryURL()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the application support directory URL, attempting to create it if it does <strong>NOT</strong> exist.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    If checking the URL is reachable fails <strong>OR</strong> if creation of the directory fails
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applicationSupportDirectoryURL</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The application support directory URL</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC5FeigeE18cachesDirectoryURL10Foundation0F0VSgyKF"></a>
+                    <a name="//apple_ref/swift/Method/cachesDirectoryURL()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC5FeigeE18cachesDirectoryURL10Foundation0F0VSgyKF">cachesDirectoryURL()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the caches directory URL, attempting to create it if it does <strong>NOT</strong> exist.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    If checking the URL is reachable fails <strong>OR</strong> if creation of the directory fails
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cachesDirectoryURL</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The caches directory URL</p>
                       </div>
                     </section>
                   </div>

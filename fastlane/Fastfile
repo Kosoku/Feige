@@ -13,9 +13,12 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+import "../Overseer/fastlane/Fastfile"
+
 default_platform(:ios)
 
 platform :ios do
+  module_name = "Feige"
   info_plist_path = "Feige/Info.plist"
   podspec_name = "Feige.podspec"
   plist_bundle_short_version_string_key = "CFBundleShortVersionString"
@@ -54,12 +57,8 @@ platform :ios do
   end
 
   desc "Update docs"
-  lane :update_docs do
-    Dir.chdir("..") do
-      sh("./scripts/jazzy.sh")
-      sh("git add .")
-      sh("git commit -a -m \"Update docs\"")
-    end
+  lane :update_docs_feige do
+    update_docs(module: module_name, info_plist_path: info_plist_path)
   end
 
   desc "Create push git tag"

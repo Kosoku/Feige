@@ -18,42 +18,21 @@ import "../Overseer/fastlane/Fastfile"
 default_platform(:ios)
 
 platform :ios do
+  scheme_name = "Feige"
   module_name = "Feige"
   info_plist_path = "Feige/Info.plist"
   podspec_name = "Feige.podspec"
+  xcodeproj_path = "Feige.xcodeproj"
   plist_bundle_short_version_string_key = "CFBundleShortVersionString"
 
   desc "Unit tests"
-  lane :unit_tests do
-    run_tests(scheme: "Feige")
+  lane :unit_tests_feige do
+    unit_tests(scheme: scheme_name)
   end
 
-  desc "Code coverage generate"
-  lane :code_coverage_generate do
-    Dir.chdir("..") do
-      sh("bundle exec slather")
-    end
-  end
-
-  desc "Lint local podspec"
-  lane :lint_local_podspec do
-    Dir.chdir("..") do
-      sh("bundle exec pod lib lint #{podspec_name}")
-    end
-  end
-
-  desc "Lint remote podspec"
-  lane :lint_remote_podspec do
-    Dir.chdir("..") do
-      sh("bundle exec pod spec lint #{podspec_name}")
-    end
-  end
-
-  desc "Push remote podspec"
-  lane :push_remote_podspec do
-    Dir.chdir("..") do
-      sh("bundle exec pod trunk push #{podspec_name}")
-    end
+  desc "Generate code coverage file"
+  lane :code_coverage_feige do
+    code_coverage(scheme: scheme_name, xcodeproj_path: xcodeproj_path)
   end
 
   desc "Update docs"
@@ -62,13 +41,8 @@ platform :ios do
   end
 
   desc "Create push git tag"
-  lane :create_push_git_tag do
-    Dir.chdir("..") do
-      tag_name = sh("./scripts/print_info_plist_key.sh #{plist_bundle_short_version_string_key}").strip()
-      
-      sh("git tag -a #{tag_name} -m \"Version #{tag_name}\"")
-      sh("git push --follow-tags")
-    end
+  lane :create_push_git_tag_feige do
+    create_push_git_tag(info_plist_path: info_plist_path)
   end
 
   desc "Set short version string"

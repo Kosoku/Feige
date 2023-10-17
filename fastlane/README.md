@@ -79,6 +79,14 @@ Lint remote podspec
 
 Push remote podspec
 
+### ios update_docs_feige
+
+```sh
+[bundle exec] fastlane ios update_docs_feige
+```
+
+Update docs
+
 ### ios create_push_git_tag
 
 ```sh

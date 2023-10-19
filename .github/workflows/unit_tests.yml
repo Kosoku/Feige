@@ -42,7 +42,7 @@ jobs:
       - name: Unit tests
         run: bundle exec fastlane unit_tests
       - name: Code coverage generate
-        run: bundle exec fastlane code_coverage_generate
+        run: bundle exec fastlane code_coverage
       - name: Code coverage upload
         uses: codecov/codecov-action@v3
         with:

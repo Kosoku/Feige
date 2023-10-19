@@ -23,21 +23,10 @@ platform :ios do
   info_plist_path = "Feige/Info.plist"
   podspec_name = "Feige.podspec"
   xcodeproj_path = "Feige.xcodeproj"
-  plist_bundle_short_version_string_key = "CFBundleShortVersionString"
 
   ENV[scheme_name.upcase] = scheme_name
   ENV[xcodeproj_path.upcase] = xcodeproj_path
   ENV[module_name.upcase] = module_name
   ENV[info_plist_path.upcase] = info_plist_path
-
-  desc "Set short version string"
-  lane :set_short_version_string do
-    Dir.chdir("..") do
-      short_version_string = prompt(text: "Short version string: ")
-
-      sh("./scripts/set_info_plist_key.sh #{plist_bundle_short_version_string_key} #{short_version_string}")
-      sh("./scripts/set_podspec_version.sh #{short_version_string}")
-      sh("git commit -a -m \"Bump version to #{short_version_string}\"")
-    end
-  end
+  ENV[podspec_name.upcase] = podspec_name
 end

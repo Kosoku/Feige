@@ -71,13 +71,19 @@ Create push git tag
 
 - `info_plist_path`: The info plist path
 
-### ios set_short_version_string
+### ios update_version
 
 ```sh
-[bundle exec] fastlane ios set_short_version_string
+[bundle exec] fastlane ios update_version
 ```
 
-Set short version string
+Updates the version
+
+- `version_name`: The version name to update to
+
+- `info_plist_path` The path to the info plist to update
+
+- `podspec_path`: The path to the podspec to update
 
 ----
 

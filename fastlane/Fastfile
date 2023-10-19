@@ -13,20 +13,14 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-import "../Overseer/fastlane/Fastfile"
+$module_scheme_name = "Feige"
+
+ENV["SCHEME_NAME"] = $module_scheme_name
+ENV["MODULE_NAME"] = $module_scheme_name
+ENV["INFO_PLIST_PATH"] = "Feige/Info.plist"
+ENV["PODSPEC_PATH"] = "Feige.podspec"
+ENV["XCODEPROJ_PATH"] = "Feige.xcodeproj"
+
+import("../Overseer/fastlane/Fastfile")
 
 default_platform(:ios)
-
-platform :ios do
-  scheme_name = "Feige"
-  module_name = "Feige"
-  info_plist_path = "Feige/Info.plist"
-  podspec_name = "Feige.podspec"
-  xcodeproj_path = "Feige.xcodeproj"
-
-  ENV[scheme_name.upcase] = scheme_name
-  ENV[xcodeproj_path.upcase] = xcodeproj_path
-  ENV[module_name.upcase] = module_name
-  ENV[info_plist_path.upcase] = info_plist_path
-  ENV[podspec_name.upcase] = podspec_name
-end

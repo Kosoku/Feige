@@ -25,25 +25,10 @@ platform :ios do
   xcodeproj_path = "Feige.xcodeproj"
   plist_bundle_short_version_string_key = "CFBundleShortVersionString"
 
-  desc "Unit tests"
-  lane :unit_tests_feige do
-    unit_tests(scheme: scheme_name)
-  end
-
-  desc "Generate code coverage file"
-  lane :code_coverage_feige do
-    code_coverage(scheme: scheme_name, xcodeproj_path: xcodeproj_path)
-  end
-
-  desc "Update docs"
-  lane :update_docs_feige do
-    update_docs(module: module_name, info_plist_path: info_plist_path)
-  end
-
-  desc "Create push git tag"
-  lane :create_push_git_tag_feige do
-    create_push_git_tag(info_plist_path: info_plist_path)
-  end
+  ENV[scheme_name.upcase] = scheme_name
+  ENV[xcodeproj_path.upcase] = xcodeproj_path
+  ENV[module_name.upcase] = module_name
+  ENV[info_plist_path.upcase] = info_plist_path
 
   desc "Set short version string"
   lane :set_short_version_string do

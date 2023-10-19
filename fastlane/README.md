@@ -15,6 +15,28 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios unit_tests
+
+```sh
+[bundle exec] fastlane ios unit_tests
+```
+
+Unit tests
+
+- `scheme_name`: The scheme name to run unit tests for
+
+### ios code_coverage
+
+```sh
+[bundle exec] fastlane ios code_coverage
+```
+
+Generate code coverage XML file
+
+- `scheme_name`: The scheme name to generate code coverage XML file for
+
+- `xcodeproj_path`: The path to the xcodeproj file
+
 ### ios print_info_plist_key
 
 ```sh
@@ -35,57 +57,9 @@ Print info plist key
 
 Update docs
 
-- `module`: The module name
+- `module_name`: The module name
 
 - `info_plist_path`: The path to the info plist
-
-### ios unit_tests
-
-```sh
-[bundle exec] fastlane ios unit_tests
-```
-
-Unit tests
-
-### ios code_coverage_generate
-
-```sh
-[bundle exec] fastlane ios code_coverage_generate
-```
-
-Code coverage generate
-
-### ios lint_local_podspec
-
-```sh
-[bundle exec] fastlane ios lint_local_podspec
-```
-
-Lint local podspec
-
-### ios lint_remote_podspec
-
-```sh
-[bundle exec] fastlane ios lint_remote_podspec
-```
-
-Lint remote podspec
-
-### ios push_remote_podspec
-
-```sh
-[bundle exec] fastlane ios push_remote_podspec
-```
-
-Push remote podspec
-
-### ios update_docs_feige
-
-```sh
-[bundle exec] fastlane ios update_docs_feige
-```
-
-Update docs
 
 ### ios create_push_git_tag
 
@@ -94,6 +68,8 @@ Update docs
 ```
 
 Create push git tag
+
+- `info_plist_path`: The info plist path
 
 ### ios set_short_version_string
 

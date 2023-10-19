@@ -15,6 +15,36 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios lint_local_podspec
+
+```sh
+[bundle exec] fastlane ios lint_local_podspec
+```
+
+Lint local podspec
+
+- `podspec_path`: The path to the podspec to lint
+
+### ios lint_remote_podspec
+
+```sh
+[bundle exec] fastlane ios lint_remote_podspec
+```
+
+Lint remote podspec
+
+- `podspec_path`: The path to the podspec to lint
+
+### ios publish_remote_podspec
+
+```sh
+[bundle exec] fastlane ios publish_remote_podspec
+```
+
+Publish remote podspec
+
+- `podspec_path`: The path to the podspec to lint
+
 ### ios unit_tests
 
 ```sh

@@ -21,50 +21,6 @@ import Foundation
 
 // MARK: - Public Functions
 /**
- Returns whether `left` is less than `right`.
- 
- - Parameter left: The left operand
- - Parameter right: The right operand
- - Returns: `true` if `left` is less than `right`, otherwise `false`
- */
-public func < (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    left.compare(right) == .orderedAscending
-}
-
-/**
- Returns whether `left` is less than or equal to `right`.
- 
- - Parameter left: The left operand
- - Parameter right: The right operand
- - Returns: `true` if `left` is less than or equal to `right`, otherwise `false`
- */
-public func <= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    left.compare(right) != .orderedAscending
-}
-
-/**
- Returns whether `left` is greater than `right`.
- 
- - Parameter left: The left operand
- - Parameter right: The right operand
- - Returns: `true` if `left` is greater than `right`, otherwise `false`
- */
-public func > (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    left.compare(right) == .orderedDescending
-}
-
-/**
- Returns whether `left` is greater than or equal to `right`.
- 
- - Parameter left: The left operand
- - Parameter right: The right operand
- - Returns: `true` if `left` is greater than or equal to `right`, otherwise `false`
- */
-public func >= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    left.compare(right) != .orderedDescending
-}
-
-/**
  Returns the result of adding `left` to `right`.
  
  - Parameter left: The left operand
@@ -215,5 +171,12 @@ public extension NSDecimalNumber {
      */
     func inverted() -> NSDecimalNumber {
         self * .negativeOne
+    }
+}
+
+extension NSDecimalNumber: Comparable {
+    // MARK: - Comparable
+    public static func < (lhs: NSDecimalNumber, rhs: NSDecimalNumber) -> Bool {
+        lhs.compare(rhs) == .orderedAscending
     }
 }

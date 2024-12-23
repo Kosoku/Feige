@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Feige'
-  s.version = '2.2.2'
+  s.version = '2.2.3'
   s.summary = 'Feige is a Swift iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
   s.description = <<-DESC

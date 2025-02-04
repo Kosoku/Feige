@@ -35,8 +35,8 @@ import Foundation
  */
 @inlinable
 @inline(__always)
-public func run<T>(_ block: () -> T) -> T {
-    block()
+public func run<T>(_ block: () throws -> T) rethrows -> T {
+    try block()
 }
 
 /**
@@ -74,8 +74,8 @@ public extension ScopeFunctions {
      */
     @inlinable
     @inline(__always)
-    func `let`<T>(_ block: (Self) -> T) -> T {
-        block(self)
+    func `let`<T>(_ block: (Self) throws -> T) rethrows -> T {
+        try block(self)
     }
     
     /**
@@ -97,8 +97,8 @@ public extension ScopeFunctions {
      */
     @inlinable
     @inline(__always)
-    func takeIf(_ predicate: (Self) -> Bool) -> Self? {
-        predicate(self) ? self : nil
+    func takeIf(_ predicate: (Self) throws -> Bool) rethrows -> Self? {
+        try predicate(self) ? self : nil
     }
     
     /**
@@ -120,8 +120,8 @@ public extension ScopeFunctions {
      */
     @inlinable
     @inline(__always)
-    func takeUnless(_ predicate: (Self) -> Bool) -> Self? {
-        predicate(self) ? nil : self
+    func takeUnless(_ predicate: (Self) throws -> Bool) rethrows -> Self? {
+        try predicate(self) ? nil : self
     }
 }
 
@@ -150,10 +150,10 @@ public extension ScopeFunctions where Self: Any {
     @discardableResult
     @inlinable
     @inline(__always)
-    func also(_ block: (inout Self) -> Void) -> Self {
+    func also(_ block: (inout Self) throws -> Void) rethrows -> Self {
         var retval = self
         
-        block(&retval)
+        try block(&retval)
         
         return retval
     }
@@ -184,8 +184,8 @@ public extension ScopeFunctions where Self: AnyObject {
     @discardableResult
     @inlinable
     @inline(__always)
-    func also(_ block: (Self) -> Void) -> Self {
-        block(self)
+    func also(_ block: (Self) throws -> Void) rethrows -> Self {
+        try block(self)
         
         return self
     }
